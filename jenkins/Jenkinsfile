@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Building the image') {
             steps {
-                dir("${WORKSPACE}/vincent-devops/docker") {
+                dir("${WORKSPACE}/vincent-devops/") {
                     script {
                         sh """ 
                             docker build -t ${env.DOCKER_HUB_REGISTRY}/jenkins-master:${params.IMAGE_TAG} .
