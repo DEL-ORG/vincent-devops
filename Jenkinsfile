@@ -23,7 +23,7 @@ pipeline {
                 dir("${WORKSPACE}/vincent-devops/docker") {
                     script {
                         sh """ 
-                            docker build -t ${env.DOCKER_HUB_REGISTRY}/jenkins-master-slave:${params.IMAGE_TAG} .
+                            docker build -t ${env.DOCKER_HUB_REGISTRY}/jenkins-master:${params.IMAGE_TAG} .
                         """ 
                     }
                 }
